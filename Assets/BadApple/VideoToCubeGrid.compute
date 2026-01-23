@@ -1,0 +1,30 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+struct CubeData {
+    float3 position;
+    float4 color;
+};
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWStructuredBuffer<CubeData> _CubeBuffer;
+Texture2D _VideoTexture;
+SamplerState sampler_VideoTexture;
+
+uint2 _GridSize;
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _GridSize.x || id.y >= _GridSize.y) return;
+
+    float2 uv = float2((float)id.x / _GridSize.x, (float)id.y / _GridSize.y);
+    float4 pixelColor = _VideoTexture.SampleLevel(sampler_VideoTexture, uv, 0);
+    
+    uint index = id.y * _GridSize.x + id.x;
+    _CubeBuffer[index].color = pixelColor;
+    
+    float brightness = pixelColor.r;
+    _CubeBuffer[index].position = float3(id.x, brightness, id.y);
+}
