@@ -44,9 +44,17 @@ namespace BadApple
             computeShader.Dispatch(kernel, Mathf.CeilToInt(cubeGridSize.x / 8f), Mathf.CeilToInt(cubeGridSize.y / 8f), 1);
 
             // 2. 재질에 버퍼 전달
+            instancingMaterial.EnableKeyword("PROCEDURAL_INSTANCING_ON");
             instancingMaterial.SetBuffer(CubeBuffer, cubeBuffer);
             
-            Graphics.DrawMeshInstancedProcedural(cubeMesh, 0, instancingMaterial, bounds, CubeCount);
+            // Graphics.DrawMeshInstancedProcedural(cubeMesh, 0, instancingMaterial, bounds, CubeCount);
+            var renderParams = new RenderParams(instancingMaterial);
+            renderParams.worldBounds = bounds;
+            renderParams.layer = gameObject.layer;
+            renderParams.receiveShadows = true;
+            renderParams.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            
+            Graphics.RenderMeshPrimitives(renderParams, cubeMesh, 0, CubeCount);
         }
 
         private void OnDestroy()

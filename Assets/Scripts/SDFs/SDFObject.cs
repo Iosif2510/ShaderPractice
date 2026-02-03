@@ -1,16 +1,9 @@
 using UnityEngine;
 
-public class SDFObject : MonoBehaviour
+namespace SDFs
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public abstract class SDFObject : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public abstract float SignedDistanceFunction(Vector3 point);
     }
 }

@@ -140,7 +140,7 @@ Properties
                 float3 normalWS = normalize(input.normalWS);
                 float3 viewDirWS = SafeNormalize(GetCameraPositionWS() - input.positionWS);
 
-                // 2. 조명 데이터 가져오기 (이게 빠졌을 가능성이 큼)
+                // 2. 조명 데이터 가져오기
                 // 셰이더 내부에서 메인 라이트 데이터를 명시적으로 로드합니다.
                 float4 shadowCoord = TransformWorldToShadowCoord(input.positionWS);
 

@@ -326,8 +326,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840934596}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.55468684, y: -0, z: -0, w: 0.83205926}
-  m_LocalPosition: {x: 79.8, y: 89.8, z: 8.7}
+  m_LocalRotation: {x: 0.55468684, y: 0, z: 0, w: 0.83205926}
+  m_LocalPosition: {x: 52.8, y: 61.4, z: 1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -387,6 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1290743947}
   - component: {fileID: 1290743946}
+  - component: {fileID: 1290743948}
   m_Layer: 0
   m_Name: CubeGridPlayer
   m_TagString: Untagged
@@ -406,10 +407,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469bfae755d94949a2a8281dbf666cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 1356125095}
+  videoPlayer: {fileID: 1290743948}
   videoRenderTexture: {fileID: 8400000, guid: 88cc65fab27e8304d899d2ce9d446024, type: 2}
   computeShader: {fileID: 7200000, guid: 2ae512cf7aaa3ca41b3edc75b558b641, type: 3}
-  cubeGridSize: {x: 160, y: 120}
+  cubeGridSize: {x: 108, y: 72}
   cubeMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   instancingMaterial: {fileID: 2100000, guid: e8de4b0f68b21a94bb3cd116a0d615b6, type: 2}
   bounds:
@@ -430,32 +431,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1356125094
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1356125096}
-  - component: {fileID: 1356125095}
-  m_Layer: 0
-  m_Name: Video Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!328 &1356125095
+--- !u!328 &1290743948
 VideoPlayer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356125094}
+  m_GameObject: {fileID: 1290743945}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 948d4534f0797f8459818c44046e71c6, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: dbc2cdad009e66d41be8dd08bc6ac9b0, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 840934598}
@@ -464,7 +448,7 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 2
-  m_AspectRatio: 2
+  m_AspectRatio: 1
   m_DataSource: 0
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
@@ -483,21 +467,6 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
---- !u!4 &1356125096
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356125094}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4720043, y: -1.2170744, z: 18.74426}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1385759127
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,6 +582,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 840934599}
   - {fileID: 390208678}
-  - {fileID: 1356125096}
   - {fileID: 1385759131}
   - {fileID: 1290743947}
