@@ -1,0 +1,25 @@
+{
+    "name": "_2510.SimpleMeshOutline.Editor.Tests",
+    "rootNamespace": "_2510.SimpleMeshOutline.Tests.Editor",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "_2510.SimpleMeshOutline",
+        "_2510.SimpleMeshOutline.Tests"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

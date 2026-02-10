@@ -1,0 +1,18 @@
+{
+    "name": "_2510.SimpleMeshOutline.Editor",
+    "rootNamespace": "_2510.SimpleMeshOutline.Editor",
+    "references": [
+        "_2510.SimpleMeshOutline"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

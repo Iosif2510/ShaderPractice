@@ -1,0 +1,12 @@
+{
+  "name": "com.2510.simplemeshoutline",
+  "displayName": "Simple Mesh Outline",
+  "version": "0.2.1",
+  "unity": "2022.2",
+  "unityRelease": "1f1",
+  "description": "Easily implement 'Inverted Hull Outline' and bake smooth-normal meshes for outline with low cost.",
+  "author": {
+    "name": "gpotatok",
+    "email": "gpotatok@gmail.com"
+  }
+}
