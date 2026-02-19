@@ -36,14 +36,14 @@ namespace BadApple
         }
         
         private void Update() {
-            // 1. 컴퓨트 셰이더 실행
+            // 컴퓨트 셰이더 실행
             var kernel = computeShader.FindKernel("CSMain");
             computeShader.SetTexture(kernel, VideoTexture, videoRenderTexture);
             computeShader.SetBuffer(kernel, CubeBuffer, cubeBuffer);
             computeShader.SetInts(GridSize, cubeGridSize.x, cubeGridSize.y);
             computeShader.Dispatch(kernel, Mathf.CeilToInt(cubeGridSize.x / 8f), Mathf.CeilToInt(cubeGridSize.y / 8f), 1);
 
-            // 2. 재질에 버퍼 전달
+            // 재질에 버퍼 전달
             instancingMaterial.EnableKeyword("PROCEDURAL_INSTANCING_ON");
             instancingMaterial.SetBuffer(CubeBuffer, cubeBuffer);
             

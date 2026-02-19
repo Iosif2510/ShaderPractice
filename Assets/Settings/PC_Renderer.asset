@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d4d664c9a2f4a9d96be5b591e30177, type: 3}
   m_Name: StencilDebug
   m_EditorClassIdentifier: StencilDebugger::StencilDebugger.StencilDebug
-  m_Active: 1
+  m_Active: 0
   injectionPoint: 550
   showInSceneView: 1
   scale: 40
